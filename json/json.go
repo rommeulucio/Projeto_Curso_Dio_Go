@@ -43,10 +43,9 @@ func main() {
 	json.Unmarshal(byteValue, &usuarios)
 
 	for i := 0; i < len(usuarios.Users); i++ {
+		fmt.Println("Usuário Nome: " + usuarios.Users[i].Nome)
 		fmt.Println("Usuario Tipo: " + usuarios.Users[i].Tipo)
 		fmt.Println("Usuário Idade: " + strconv.Itoa(usuarios.Users[i].Idade))
-		fmt.Println("Usuário Nome: " + usuarios.Users[i].Nome)
-
 	}
 
 }
