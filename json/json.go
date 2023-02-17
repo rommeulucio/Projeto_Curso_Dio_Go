@@ -36,11 +36,11 @@ func main() {
 
 	defer jsonFile.Close()
 
-	byteValue, _ := ioutil.ReadAll(jsonFile)
+	byteValue, _ := ioutil.ReadAll(jsonFile) //ele vai ler tudo EMPACOTANDO O arquivo JSONFILE
 
 	var usuarios Users
 
-	json.Unmarshal(byteValue, &usuarios)
+	json.Unmarshal(byteValue, &usuarios) //ELE VAI DESEMPACOTAR O ARQUIVO JSON
 
 	for i := 0; i < len(usuarios.Users); i++ {
 		fmt.Println("Usuário Nome: " + usuarios.Users[i].Nome)
